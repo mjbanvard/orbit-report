@@ -29,11 +29,16 @@ export class AppComponent {
 
           let fetchedSatellites = data.satellites;
           // TODO: loop over satellites
-          *ngFor = "let satellite of satellites; i = index";
-          
-          // TODO: create a Satellite object using new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
+          // TODO: create a Satellite object using new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, 
+          //    fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
           // TODO: add the new Satellite object to sourceList using: this.sourceList.push(satellite);
 
+          for (let i = 0; i < fetchedSatellites.length; i += 1) {
+              let tempSatellite = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, 
+                    fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
+              this.sourceList.push(tempSatellite);
+          };
+          
           }.bind(this));
         }.bind(this));
 
