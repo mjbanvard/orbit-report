@@ -1,3 +1,4 @@
+import { checkServerIdentity } from 'tls';
 
 
 export class Satellite {
@@ -20,4 +21,14 @@ export class Satellite {
         this.orbitType = orbitType;
         this.operational = operational;
     };
+
+    shouldShowWarning() {
+        checkType: Boolean;
+        if (this.type = "Space Debris") {
+            check = True;
+        } else {
+            check = False;
+        }
+        return checkType;
+    }
 }
