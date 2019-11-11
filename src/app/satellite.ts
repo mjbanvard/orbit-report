@@ -1,4 +1,4 @@
-import { checkServerIdentity } from 'tls';
+//import { checkServerIdentity } from 'tls';
 
 
 export class Satellite {
@@ -23,11 +23,11 @@ export class Satellite {
     };
 
     shouldShowWarning() {
-        checkType: Boolean;
+        let checkType: Boolean = true ;
         if (this.type = "Space Debris") {
-            check = True;
+            checkType = true;
         } else {
-            check = False;
+            checkType = false;
         }
         return checkType;
     }
