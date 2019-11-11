@@ -23,12 +23,10 @@ export class Satellite {
     };
 
     shouldShowWarning() {
-        let checkType: Boolean = true ;
-        if (this.type = "Space Debris") {
-            checkType = true;
+        if (this.type == "Space Debris") {
+            return true;
         } else {
-            checkType = false;
+            return false;
         }
-        return checkType;
     }
 }
