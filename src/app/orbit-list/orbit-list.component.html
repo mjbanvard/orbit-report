@@ -1,10 +1,10 @@
 
 <body>
     <h3>Orbit Report</h3>
-    <table>
+    <table matSort (matSortChange)="sortData($event)"> 
         <tr class="header-row">
-            <th class="sortable">Name</th>
-            <th class="sortable">Type</th>
+            <th class="sortable" mat-sort-header="name">Name</th>
+            <th class="sortable" mat-sort-header="type">Type</th>
             <th>Operational</th>
             <th>Orbit Type</th>
             <th>Launch Date</th>
