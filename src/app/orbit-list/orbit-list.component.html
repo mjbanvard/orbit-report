@@ -1,15 +1,16 @@
 
-<body>
+<html ng-app='myApp'>
+<body ng-controller="myController">
     <h3>Orbit Report</h3>
-    <table matSort (matSortChange)="sortData($event)"> 
+    <table matSort (matSortChange)="sortData($event)">
         <tr class="header-row">
-            <th class="sortable" mat-sort-header="name">Name</th>
-            <th class="sortable" mat-sort-header="type">Type</th>
+            <th ng-click (click)='sort("name")' class="sortable">Name</th>
+            <th ng-click (click)='sort("type")' class="sortable">Type</th>
             <th>Operational</th>
             <th>Orbit Type</th>
             <th>Launch Date</th>
         </tr>
-        <tr *ngFor="let satellite of satellites; let i = index"> 
+        <tr *ngFor="let satellite of satellites; let i = index">
             <th>{{i + 1}} - {{satellite.name}}</th>
             <th [class.warning] = "satellite.shouldShowWarning()">{{satellite.type}}</th>
             <th>{{satellite.operational}}</th>
@@ -18,3 +19,4 @@
         </tr>
     </table>
 </body>
+</html>
