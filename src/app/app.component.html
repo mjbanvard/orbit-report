@@ -1,9 +1,11 @@
+<html>
 <app-orbit-list [satellites]="displayList"></app-orbit-list>
 
 <div class="search-form">
-  <form action = "/cgi-bin/hello_get.cgi" method = "get">
+  <form>
     Search:
     <input (keyup.enter) = "search(searchTerm.value)"/>
     <button (click) = "search(searchTerm.value)">SEARCH!</button>
   </form>
 </div>
+</html>
