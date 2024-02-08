@@ -24,7 +24,7 @@
     "fsevents": "^2.2.1",
     "ini": "^2.0.0",
     "kind-of": "^6.0.3",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node-forge": "^0.10.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
